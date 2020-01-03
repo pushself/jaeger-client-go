@@ -16,9 +16,7 @@ package transport
 
 import (
 	"bytes"
-	"fmt"
-	"io"
-	"io/ioutil"
+	"fasthttp"
 	"net/http"
 	"time"
 
@@ -139,29 +137,47 @@ func (c *HTTPTransport) send(spans []*j.Span) error {
 	if err != nil {
 		return err
 	}
-	req, err := http.NewRequest("POST", c.url, body)
-	if err != nil {
+
+	req := fasthttp.AcquireRequest()
+	resp := fasthttp.AcquireResponse()
+	req.SetRequestURI(c.url)
+	req.SetBody(body.Bytes())
+	req.Header.SetContentType("application/x-thrift")
+	req.Header.SetMethod("POST")
+
+	if err := fasthttp.Do(req, resp); err != nil {
 		return err
 	}
-	req.Header.Set("Content-Type", "application/x-thrift")
-	for k, v := range c.headers {
-		req.Header.Set(k, v)
+	if resp.StatusCode() != fasthttp.StatusOK {
+		return nil
 	}
 
-	if c.httpCredentials != nil {
-		req.SetBasicAuth(c.httpCredentials.username, c.httpCredentials.password)
-	}
-
-	resp, err := c.client.Do(req)
-	if err != nil {
-		return err
-	}
-	io.Copy(ioutil.Discard, resp.Body)
-	resp.Body.Close()
-	if resp.StatusCode >= http.StatusBadRequest {
-		return fmt.Errorf("error from collector: %d", resp.StatusCode)
-	}
 	return nil
+
+	//
+	//req, err := http.NewRequest("POST", c.url, body)
+	//if err != nil {
+	//	return err
+	//}
+	//req.Header.Set("Content-Type", "application/x-thrift")
+	//for k, v := range c.headers {
+	//	req.Header.Set(k, v)
+	//}
+	//
+	//if c.httpCredentials != nil {
+	//	req.SetBasicAuth(c.httpCredentials.username, c.httpCredentials.password)
+	//}
+	//
+	//resp, err := c.client.Do(req)
+	//if err != nil {
+	//	return err
+	//}
+	//io.Copy(ioutil.Discard, resp.Body)
+	//resp.Body.Close()
+	//if resp.StatusCode >= http.StatusBadRequest {
+	//	return fmt.Errorf("error from collector: %d", resp.StatusCode)
+	//}
+	//return nil
 }
 
 func serializeThrift(obj thrift.TStruct) (*bytes.Buffer, error) {
