@@ -16,7 +16,7 @@ package transport
 
 import (
 	"bytes"
-	"fasthttp"
+	"github.com/valyala/fasthttp"
 	"net/http"
 	"time"
 
