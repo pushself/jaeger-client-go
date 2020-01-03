@@ -64,7 +64,7 @@ imports:
   - suite
 - name: github.com/pushself-go/atomic
   version: df976f2515e274675050de7b3f42545de80594fd
-- name: github.com/pushself/jaeger-lib
+- name: github.com/uber/jaeger-lib
   version: a87ae9d84fb038a8d79266298970720be7c80fcd
   subpackages:
   - metrics

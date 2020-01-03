@@ -51,7 +51,7 @@ import (
 	jaegerClientConfig "github.com/pushself/jaeger-client-go/config"
 	"github.com/pushself/jaeger-client-go/zipkin"
 	"github.com/pushself/jaeger-client-go/log"
-	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics"
 )
 
 func main(){
@@ -61,7 +61,7 @@ func main(){
 	cfg := jaegercfg.Configuration{}
 	
 	// Example logger and metrics factory. Use github.com/pushself/jaeger-client-go/log
-	// and github.com/pushself/jaeger-lib/metrics respectively to bind to real logging and metrics
+	// and github.com/uber/jaeger-lib/metrics respectively to bind to real logging and metrics
 	// frameworks.
 	jLogger := jaegerlog.StdLogger
 	jMetricsFactory := metrics.NullFactory

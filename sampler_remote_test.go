@@ -22,7 +22,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	mTestutils "github.com/pushself/jaeger-lib/metrics/metricstest"
+	mTestutils "github.com/uber/jaeger-lib/metrics/metricstest"
 
 	"github.com/pushself/jaeger-client-go/log"
 	"github.com/pushself/jaeger-client-go/testutils"

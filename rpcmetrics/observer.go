@@ -21,7 +21,7 @@ import (
 
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
-	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics"
 
 	jaeger "github.com/pushself/jaeger-client-go"
 )

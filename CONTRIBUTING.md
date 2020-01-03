@@ -52,7 +52,7 @@ For example:
 import (
 	"fmt"
 
-	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics"
 	"go.uber.org/zap"
 
 	"github.com/pushself/jaeger-client-go/config"

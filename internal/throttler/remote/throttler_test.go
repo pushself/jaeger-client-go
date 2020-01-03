@@ -30,7 +30,7 @@ import (
 	"github.com/pushself/jaeger-client-go"
 	"github.com/pushself/jaeger-client-go/internal/throttler"
 	"github.com/pushself/jaeger-client-go/log"
-	"github.com/pushself/jaeger-lib/metrics/metricstest"
+	"github.com/uber/jaeger-lib/metrics/metricstest"
 )
 
 var _ throttler.Throttler = &Throttler{}

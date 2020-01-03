@@ -100,14 +100,14 @@ example: `name:jaeger.traces, state:started, sampled:y`. See [metrics.go](./metr
 file for the full list and descriptions of emitted metrics.
 
 The monitoring backend is represented by the `metrics.Factory` interface from package
-[`"github.com/pushself/jaeger-lib/metrics"`](https://github.com/jaegertracing/jaeger-lib/tree/master/metrics).  An implementation
+[`"github.com/uber/jaeger-lib/metrics"`](https://github.com/jaegertracing/jaeger-lib/tree/master/metrics).  An implementation
 of that interface can be passed as an option to either the Configuration object or the Tracer
 constructor, for example:
 
 ```go
 import (
     "github.com/pushself/jaeger-client-go/config"
-    "github.com/pushself/jaeger-lib/metrics/prometheus"
+    "github.com/uber/jaeger-lib/metrics/prometheus"
 )
 
     metricsFactory := prometheus.New()

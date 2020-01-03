@@ -19,7 +19,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
-	jprom "github.com/pushself/jaeger-lib/metrics/prometheus"
+	jprom "github.com/uber/jaeger-lib/metrics/prometheus"
 
 	"github.com/pushself/jaeger-client-go"
 )

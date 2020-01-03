@@ -27,8 +27,8 @@ import (
 	"github.com/opentracing/opentracing-go/ext"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/pushself/jaeger-lib/metrics"
-	"github.com/pushself/jaeger-lib/metrics/metricstest"
+	"github.com/uber/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics/metricstest"
 
 	"github.com/pushself/jaeger-client-go/log"
 	"github.com/pushself/jaeger-client-go/testutils"

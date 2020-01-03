@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/pushself/jaeger-lib/metrics/metricstest"
+	"github.com/uber/jaeger-lib/metrics/metricstest"
 )
 
 // E.g. tags("key", "value", "key", "value")

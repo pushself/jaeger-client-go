@@ -21,7 +21,7 @@ import (
 
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/stretchr/testify/assert"
-	u "github.com/pushself/jaeger-lib/metrics/metricstest"
+	u "github.com/uber/jaeger-lib/metrics/metricstest"
 
 	"github.com/opentracing/opentracing-go/ext"
 	jaeger "github.com/pushself/jaeger-client-go"

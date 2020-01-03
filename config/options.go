@@ -16,7 +16,7 @@ package config
 
 import (
 	opentracing "github.com/opentracing/opentracing-go"
-	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics"
 
 	"github.com/pushself/jaeger-client-go"
 )

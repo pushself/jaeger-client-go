@@ -15,7 +15,7 @@
 package jaeger
 
 import (
-	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/uber/jaeger-lib/metrics"
 )
 
 // Metrics is a container of all stats emitted by Jaeger tracer.
