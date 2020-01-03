@@ -19,9 +19,9 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/require"
-	jprom "github.com/uber/jaeger-lib/metrics/prometheus"
+	jprom "github.com/pushself/jaeger-lib/metrics/prometheus"
 
-	"github.com/uber/jaeger-client-go"
+	"github.com/pushself/jaeger-client-go"
 )
 
 // TestNewPrometheusMetrics ensures that the metrics do not have conflicting dimensions and will work with Prometheus.

@@ -23,12 +23,12 @@ import (
 
 	"github.com/opentracing/opentracing-go"
 
-	"github.com/uber/jaeger-client-go"
-	"github.com/uber/jaeger-client-go/internal/baggage/remote"
-	throttler "github.com/uber/jaeger-client-go/internal/throttler/remote"
-	"github.com/uber/jaeger-client-go/rpcmetrics"
-	"github.com/uber/jaeger-client-go/transport"
-	"github.com/uber/jaeger-lib/metrics"
+	"github.com/pushself/jaeger-client-go"
+	"github.com/pushself/jaeger-client-go/internal/baggage/remote"
+	throttler "github.com/pushself/jaeger-client-go/internal/throttler/remote"
+	"github.com/pushself/jaeger-client-go/rpcmetrics"
+	"github.com/pushself/jaeger-client-go/transport"
+	"github.com/pushself/jaeger-lib/metrics"
 )
 
 const defaultSamplingProbability = 0.001

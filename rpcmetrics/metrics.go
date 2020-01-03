@@ -17,7 +17,7 @@ package rpcmetrics
 import (
 	"sync"
 
-	"github.com/uber/jaeger-lib/metrics"
+	"github.com/pushself/jaeger-lib/metrics"
 )
 
 const (

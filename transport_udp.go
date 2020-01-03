@@ -18,10 +18,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/uber/jaeger-client-go/thrift"
+	"github.com/pushself/jaeger-client-go/thrift"
 
-	j "github.com/uber/jaeger-client-go/thrift-gen/jaeger"
-	"github.com/uber/jaeger-client-go/utils"
+	j "github.com/pushself/jaeger-client-go/thrift-gen/jaeger"
+	"github.com/pushself/jaeger-client-go/utils"
 )
 
 // Empirically obtained constant for how many bytes in the message are used for envelope.

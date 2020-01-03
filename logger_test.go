@@ -17,7 +17,7 @@ package jaeger
 import (
 	"testing"
 
-	"github.com/uber/jaeger-client-go/log"
+	"github.com/pushself/jaeger-client-go/log"
 )
 
 func TestLogger(t *testing.T) {

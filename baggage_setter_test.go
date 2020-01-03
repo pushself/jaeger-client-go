@@ -20,9 +20,9 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/uber/jaeger-lib/metrics/metricstest"
+	"github.com/pushself/jaeger-lib/metrics/metricstest"
 
-	"github.com/uber/jaeger-client-go/internal/baggage"
+	"github.com/pushself/jaeger-client-go/internal/baggage"
 )
 
 func withTracerAndMetrics(f func(tracer *Tracer, metrics *Metrics, factory *metricstest.Factory)) {

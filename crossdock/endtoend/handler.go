@@ -24,10 +24,10 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/ext"
 
-	"github.com/uber/jaeger-client-go"
-	"github.com/uber/jaeger-client-go/config"
-	"github.com/uber/jaeger-client-go/crossdock/common"
-	"github.com/uber/jaeger-client-go/crossdock/log"
+	"github.com/pushself/jaeger-client-go"
+	"github.com/pushself/jaeger-client-go/config"
+	"github.com/pushself/jaeger-client-go/crossdock/common"
+	"github.com/pushself/jaeger-client-go/crossdock/log"
 )
 
 const (

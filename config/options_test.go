@@ -20,10 +20,10 @@ import (
 	opentracing "github.com/opentracing/opentracing-go"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/uber/jaeger-lib/metrics"
-	"github.com/uber/jaeger-lib/metrics/metricstest"
+	"github.com/pushself/jaeger-lib/metrics"
+	"github.com/pushself/jaeger-lib/metrics/metricstest"
 
-	"github.com/uber/jaeger-client-go"
+	"github.com/pushself/jaeger-client-go"
 )
 
 func TestApplyOptions(t *testing.T) {

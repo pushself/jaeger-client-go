@@ -22,11 +22,11 @@ file for details.
 This library uses [dep](https://golang.github.io/dep/) to manage dependencies.
 
 To get started, make sure you clone the Git repository into the correct location
-`github.com/uber/jaeger-client-go` relative to `$GOPATH`:
+`github.com/pushself/jaeger-client-go` relative to `$GOPATH`:
 
 ```
-mkdir -p $GOPATH/src/github.com/uber
-cd $GOPATH/src/github.com/uber
+mkdir -p $GOPATH/src/github.com/pushself
+cd $GOPATH/src/github.com/pushself
 git clone git@github.com:jaegertracing/jaeger-client-go.git jaeger-client-go
 cd jaeger-client-go
 git submodule update --init --recursive
@@ -52,10 +52,10 @@ For example:
 import (
 	"fmt"
 
-	"github.com/uber/jaeger-lib/metrics"
+	"github.com/pushself/jaeger-lib/metrics"
 	"go.uber.org/zap"
 
-	"github.com/uber/jaeger-client-go/config"
+	"github.com/pushself/jaeger-client-go/config"
 )
 ```
 
